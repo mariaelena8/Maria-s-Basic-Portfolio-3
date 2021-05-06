@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox Example</title>
+        <!-- we reference and read the .css file -->
+        <link rel="stylesheet" href="flexboxExample.css">
+    </head>
+    <title>Example</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+    order: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+  }
+  #main > nav {
+    background: #D7E8D4;
+    order: 3;
+  }
+  #main > aside {
+    background: beige;
+    order: 2;
+  }
+  header, footer {
+    background: yellowgreen;
+    height: 20vh;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+</style>
+<body>
+  <header>Maria's Basic Portfolio</header>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="About Me.html">About Me</a></li>
+  <li><a href="Blog.html">Blog</a></li>
+  <div id="main">
+    <article>About Me</article>
+    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus.</p>
+    <nav>Nav</nav>
+    <aside><img src="9d927cf0e49ac9025b8e128eaa0c15910f772f7c.png" width="190" height="140"></aside>
+  </div>
+  <footer>Footer</footer>
+</body>
